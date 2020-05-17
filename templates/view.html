@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <form method="post">
+            {% csrf_token %}
+            <li>{{ query.title }}</li>
+            <input
+                type="radio"
+                name="poll"
+                value="option1"
+                required
+            />{{query.c1 }}
+            <input type="radio" name="poll" value="option2" />{{query.c2 }}
+            <input type="radio" name="poll" value="option3" />{{query.c3 }}<br />
+
+            <input type="submit" />
+        </form>
+    </body>
+</html>

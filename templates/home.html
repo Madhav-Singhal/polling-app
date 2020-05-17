@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h2>
+            Welcome to poll site <br />
+            <a href="{% url 'create'%}">create new poll</a>
+        </h2>
+        <ol>
+            {% for i in obj %}
+
+            <li>
+                {{ i.title }}
+                <a href="{% url 'view' i.id%}"><button>view</button></a>
+                <a href="{% url 'results' i.id%}"
+                    ><button>view results</button></a
+                >
+            </li>
+            <br />
+
+            {% endfor%}
+        </ol>
+    </body>
+</html>
